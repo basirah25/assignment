@@ -1,0 +1,16 @@
+h1 {
+background-color :grey;
+color:green;}
+
+body {
+	font-family:arial;
+	background-color:#6495ED;}
+
+p { color:purple;}
+
+ul {background-color:Lavender;
+boarder: solid 5px;
+boarder-color:blue;
+boarder-top-style: dotted;
+boarder-bottom-style: dashed;
+padding-top:5px}
