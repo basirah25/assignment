@@ -7,6 +7,10 @@
 
 <p>Fill this information </p>
 
+<button onclick="mula()">START</button>
+<br>
+<form on submit="hantar(); return false/"  style= "background-color:DarkSlateBlue; color: papayawhip >
+
 <form action="index.php" method="POST" style= "background-color:DarkSlateBlue; color: papayawhip ">
 <form>
 <label for= "Name"> Name </label>
@@ -59,10 +63,26 @@
 
 
 <br> <br>
-<input type="submit" >
-<input type="reset" >
+<button type="submit" > END </button>
+<button type="reset" > RESET </button>
 
 </form>
+<h2>Submitted Info</h2>
+<p id="result"></P>
+
+
+<script>
+.alert ("Welcome Back")
+function.mula(){
+alert ("You can start fill the form. What you waiting for!!!");
+}
+
+function hantar (){
+var nama = document.getElementById("name").value;
+alert ("terima kasih"+nama);
+}
+
+</script>
 
 </body>
 </html>
