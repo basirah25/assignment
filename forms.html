@@ -1,87 +1,123 @@
+<!DOCTYPE html>
 <html>
 <head>
-<title> Test</title>
+    <title>Test Form</title>
+    <style>
+        form {
+            background-color: lavender; 
+            color: indigo; 
+            padding: 20px; 
+            line-height: 1.8;
+            border-radius: 8px;
+        }
+    </style>
 </head>
 <body>
-<h1> Welcome </h1>
+<body id="first-page">
 
-<p>Fill this information </p>
+<h1>Welcome</h1>
+<p>Fill this information</p>
 
 <button onclick="mula()">START</button>
-<br>
-<form on submit="hantar(); return false/"  style= "background-color:DarkSlateBlue; color: papayawhip >
+<button onclick="darkmode()" style="background-color:navy; color:white">Dark Mode</button>
+<button onclick="lightmode()" style="background-color:papayawhip; color:chocolate">Light Mode</button>
+<br><br>
 
-<form action="index.php" method="POST" style= "background-color:DarkSlateBlue; color: papayawhip ">
-<form>
-<label for= "Name"> Name </label>
-<input type="text" id="name" required> <br>
+<form onsubmit="hantar(); return false;">
+    <label for="name">Name</label>
+    <input type="text" id="name" required> <br>
 
-<label for= "Phone"> Phone Number</label>
-<input type="text" id="Phone"> <br>
+    <label for="Phone">Phone Number</label>
+    <input type="text" id="Phone"> <br>
 
-<label for= "Pass"> Password</label>
-<input type="text" id="Pass" required> <br>
+    <label for="Pass">Password</label>
+    <input type="password" id="Pass" required> <br>
 
-<label for= "Email"> Email</label>
-<input type="text" id="Email" > <br>
+    <label for="Email">Email</label>
+    <input type="email" id="Email"> <br>
 
-<label for= "category">Category:</label>
-	<label for= "student">Student</label>
-	<input type="radio"id="student" name="category">
-	
-	<label for= "lecturer">Lecturer</label>
-	<input type="radio"id="lecturer" name="category">
-	
-	<label for= "visitor">Visitor</label>
-	<input type="radio"id="visitor" name="category">
-	<br>
-	
-<label for= "purpose">Purpose</label>
-<select id="purpose">
-	<option value="a">To complaint </option>
-	<option value="a">To give money </option>
-	<option value="a">To ask money</option>
-</select><br>
+    <label>Category:</label>
+    <input type="radio" id="student" name="category" value="Student">
+    <label for="student">Student</label>
+    
+    <input type="radio" id="lecturer" name="category" value="Lecturer">
+    <label for="lecturer">Lecturer</label>
+    
+    <input type="radio" id="visitor" name="category" value="Visitor">
+    <label for="visitor">Visitor</label>
+    <br>
+    
+    <label for="purpose">Purpose</label>
+    <select id="purpose">
+        <option value="complaint">To complaint</option>
+        <option value="give_money">To give money</option>
+        <option value="ask_money">To ask money</option>
+    </select><br>
 
-<label for= "datetime">Date & Time</label>
-	<input type="datetime-local"id="datetime"><br>
-	
-<label for= "agree">Do you agree with tgerm and conditions?</label>
-	<input type="checkbox"id="agree"><br>
+    <label for="datetime">Date & Time</label>
+    <input type="datetime-local" id="datetime"><br>
+    
+    <label for="agree">Do you agree with terms and conditions?</label>
+    <input type="checkbox" id="agree"><br>
 
-<label for= "proof">Upload the evidence</label>
-	<input type="file"id="proof"><br>
+    <label for="proof">Upload the evidence</label>
+    <input type="file" id="proof"><br>
 
-<label for= "complaint">Write your complaint</label><br>
-<textarea for="complaint" rows="5"></textarea><br>
+    <label for="complaint">Write your complaint</label><br>
+    <textarea id="complaint" rows="5" cols="30"></textarea><br>
 
-<label for= "color">Choose your favourite color.</label>
-	<input type="color"id="color"><br>
+    <label for="color">Choose your favourite color.</label>
+    <input type="color" id="color"><br>
 
-<label for= "rating">Rate our services.</label>
-	<input type="range"id="rating" min="0" max="100"><br>
+    <label for="rating">Rate our services.</label>
+    <input type="range" id="rating" min="0" max="100"><br>
 
-
-<br> <br>
-<button type="submit" > END </button>
-<button type="reset" > RESET </button>
-
+    <br>
+    <button type="submit">END</button>
+    <button type="reset">RESET</button>
 </form>
-<h2>Submitted Info</h2>
-<p id="result"></P>
 
+<h2>Submitted Info</h2>
+<p id="result"></p>
 
 <script>
-.alert ("Welcome Back")
-function.mula(){
-alert ("You can start fill the form. What you waiting for!!!");
+
+    alert("Welcome Back");
+
+    function mula() {
+        alert("You can start filling the form. What are you waiting for!!!");
+    }
+
+    function hantar() {
+        var nama = document.getElementById("name").value;
+		 var Phone = document.getElementById("Phone").value;
+		 var Email = document.getElementById("Email").value;
+
+        alert("Terima kasih, " + nama);
+        document.getElementById("result").innerText = "Submission received for: " + nama +" "+ Phone+" "+ Email ;
+    }
+	
+function darkmode(){
+
+document.getElementById("first-page").style.color ="Papayawhip";
+document.getElementById("first-page").style.backgroundColor ="black";
+
+
+
+
 }
 
-function hantar (){
-var nama = document.getElementById("name").value;
-alert ("terima kasih"+nama);
+
+function lightmode(){
+
+document.getElementById("first-page").style.color = "Teal";
+document.getElementById("first-page").style.backgroundColor ="thistle";
+
+
 }
 
+
+	
 </script>
 
 </body>
