@@ -2,6 +2,7 @@
 <html>
 <head>
     <title>Test Form</title>
+
     <style>
         form {
             background-color: lavender; 
@@ -12,7 +13,7 @@
         }
     </style>
 </head>
-<body>
+
 <body id="first-page">
 
 <h1>Welcome</h1>
@@ -22,8 +23,13 @@
 <button onclick="darkmode()" style="background-color:navy; color:white">Dark Mode</button>
 <button onclick="lightmode()" style="background-color:papayawhip; color:chocolate">Light Mode</button>
 <br><br>
+<button onclick="largetext()"> Large Text</button>
+<button onclick="smalltext()" > Small Text</button>
+<button onclick="borang()" > Form background change</button>
+<br><br>
 
-<form onsubmit="hantar(); return false;">
+
+<form id="borang" onsubmit="hantar(); return false;">
     <label for="name">Name</label>
     <input type="text" id="name" required> <br>
 
@@ -101,10 +107,6 @@ function darkmode(){
 
 document.getElementById("first-page").style.color ="Papayawhip";
 document.getElementById("first-page").style.backgroundColor ="black";
-
-
-
-
 }
 
 
@@ -112,12 +114,22 @@ function lightmode(){
 
 document.getElementById("first-page").style.color = "Teal";
 document.getElementById("first-page").style.backgroundColor ="thistle";
-
-
 }
 
+function largetext(){
 
+document.getElementById("first-page").style.fontSize="20px";
+}
+
+function smalltext(){
+
+document.getElementById("first-page").style.fontSize="10px";
+}
 	
+function borang(){
+
+document.getElementById("borang").style.backgroundColor ="grey";
+}	
 </script>
 
 </body>
